@@ -361,7 +361,7 @@ document.addEventListener('DOMContentLoaded', () => {
   window.i18n = {
     fr: {
       nav_portfolio: "Portfolio", nav_about: "À propos", nav_projects: "Projets", nav_contact: "Contact", nav_cv: "Voir CV",
-      hero_label: "Développeur Web & Mobile à Kinshasa", hero_tagline: "Ancien étudiant en informatique. Maintenant je code pour créer des solutions.",
+      hero_label: "Développeur Web & Mobile à Kinshasa", hero_tagline: "Etudiant en informatique Appliquée à la gestion des entreprises. Maintenant je code pour créer des solutions.",
       hero_availability: "Disponible pour de nouveaux projets", hero_lang_label: "LANGUES PARLÉES", hero_languages: "Français • Lingala • Anglais",
       slide1_title: "Développeur passionné", slide1_desc: "Création d'expériences digitales uniques.",
       slide2_title: "Application Fitness", slide2_desc: "Suivi sportif mobile avec Flutter.",
@@ -372,7 +372,7 @@ document.addEventListener('DOMContentLoaded', () => {
       hero_story_caption_2: "Portfolio Personnel — HTML/CSS/JS",
       hero_story_caption_3: "Application Météo — JavaScript",
       swipe_hint: "← Glisser ou appuyer →",
-      about_label: "À PROPOS", about_title: "Qui suis-je ?", about_desc: "Développeur passionné par la création d'applications web et mobiles modernes. Formé et constamment en apprentissage, je maîtrise aussi bien la conception frontend que l'intégration backend. Ancien étudiant en informatique, j'applique aujourd'hui avec rigueur mon souci du détail au développement digital.",
+      about_label: "À PROPOS", about_title: "Qui suis-je ?", about_desc: "Développeur passionné par la création d'applications web et mobiles modernes. Formé et constamment en apprentissage, je maîtrise aussi bien la conception frontend que l'intégration backend. Etudiant en informatique Appliquée à la gestion des entreprises, j'applique aujourd'hui avec rigueur mon souci du détail au développement digital.",
       copy_btn: "Copier", copy_btn_copied: "Copié !",
       skills_label: "COMPÉTENCES", skills_technical: "Compétences techniques", skills_soft: "Savoir-être", skills_ai: "Intelligence Artificielle",
       skill_teamwork: "Travail d'équipe", skill_empathy: "Empathie", skill_detail: "Souci du détail", skill_adapt: "Adaptabilité",
