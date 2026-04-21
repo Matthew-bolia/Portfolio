@@ -32,23 +32,36 @@
       color: var(--text-dark);
       line-height: 1.5;
       -webkit-font-smoothing: antialiased;
+      -webkit-print-color-adjust: exact;
+      print-color-adjust: exact;
     }
 
     /* Print adjustment */
     @media print {
       body {
-        background: white;
+        background: white !important;
+        -webkit-print-color-adjust: exact !important;
+        print-color-adjust: exact !important;
       }
 
       .cv-container {
+        display: grid !important;
+        grid-template-columns: 320px 1fr !important;
         box-shadow: none !important;
         margin: 0 !important;
         width: 100% !important;
         max-width: none !important;
       }
 
+      .sidebar {
+        background: var(--primary) !important;
+        color: white !important;
+        -webkit-print-color-adjust: exact !important;
+        print-color-adjust: exact !important;
+      }
+
       .print-btn {
-        display: none;
+        display: none !important;
       }
 
       @page {
@@ -402,7 +415,7 @@
     <!-- SIDEBAR -->
     <aside class="sidebar">
       <div class="profile-img">
-        <img src="MB.png" alt="Matthew Bolia">
+        <img src="https://matthewbolia.vercel.app/MB.png" alt="Matthew Bolia">
       </div>
 
       <div class="sidebar-section">
