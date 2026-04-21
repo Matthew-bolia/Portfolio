@@ -1,0 +1,485 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Matthew Bolia — CV Professionnel</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap');
+
+    :root {
+      --primary: #1A237E;
+      /* Bleu Nuit */
+      --secondary: #283593;
+      --text-dark: #1A1A1A;
+      --text-gray: #4A4A4A;
+      --bg-light: #F8F9FA;
+      --border: #E0E0E0;
+      --white: #FFFFFF;
+    }
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Inter', sans-serif;
+      background: #EAEAEA;
+      color: var(--text-dark);
+      line-height: 1.5;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    /* Print adjustment */
+    @media print {
+      body {
+        background: white;
+      }
+
+      .cv-container {
+        box-shadow: none !important;
+        margin: 0 !important;
+        width: 100% !important;
+        max-width: none !important;
+      }
+
+      .print-btn {
+        display: none;
+      }
+
+      @page {
+        margin: 0;
+      }
+    }
+
+    .cv-container {
+      max-width: 900px;
+      margin: 40px auto;
+      background: var(--white);
+      box-shadow: 0 20px 50px rgba(0, 0, 0, 0.1);
+      display: grid;
+      grid-template-columns: 320px 1fr;
+      min-height: 1120px;
+      /* A4 Ratio approx */
+      overflow: hidden;
+      position: relative;
+    }
+
+    /* Left Sidebar */
+    .sidebar {
+      background: var(--primary);
+      color: var(--white);
+      padding: 40px 30px;
+    }
+
+    .profile-img {
+      width: 160px;
+      height: 160px;
+      border-radius: 20px;
+      background: var(--white);
+      margin-bottom: 30px;
+      overflow: hidden;
+      border: 5px solid rgba(255, 255, 255, 0.1);
+    }
+
+    .profile-img img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    .sidebar-section {
+      margin-bottom: 35px;
+    }
+
+    .sidebar-title {
+      font-size: 0.85rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 1.5px;
+      margin-bottom: 20px;
+      padding-bottom: 8px;
+      border-bottom: 2px solid rgba(255, 255, 255, 0.1);
+      display: block;
+    }
+
+    .contact-item {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      margin-bottom: 12px;
+      font-size: 0.85rem;
+      color: rgba(255, 255, 255, 0.9);
+      text-decoration: none;
+    }
+
+    .contact-item i {
+      width: 15px;
+      color: #9FA8DA;
+    }
+
+    .skill-list {
+      list-style: none;
+    }
+
+    .skill-item {
+      margin-bottom: 12px;
+    }
+
+    .skill-name {
+      font-size: 0.82rem;
+      font-weight: 500;
+      margin-bottom: 5px;
+      display: block;
+    }
+
+    .skill-bar {
+      height: 4px;
+      background: rgba(255, 255, 255, 0.1);
+      border-radius: 10px;
+      overflow: hidden;
+    }
+
+    .skill-progress {
+      height: 100%;
+      background: #5C6BC0;
+    }
+
+    .lang-item {
+      display: flex;
+      justify-content: space-between;
+      font-size: 0.85rem;
+      margin-bottom: 8px;
+    }
+
+    .lang-level {
+      color: #9FA8DA;
+    }
+
+    /* Main Content */
+    .main-content {
+      padding: 50px 45px;
+    }
+
+    .header-main {
+      margin-bottom: 40px;
+    }
+
+    .header-main h1 {
+      font-size: 2.8rem;
+      font-weight: 800;
+      color: var(--primary);
+      line-height: 1;
+      margin-bottom: 10px;
+    }
+
+    .header-main span {
+      color: var(--text-dark);
+    }
+
+    .job-title {
+      font-size: 1.2rem;
+      font-weight: 500;
+      color: var(--text-gray);
+      letter-spacing: 0.5px;
+    }
+
+    .summary {
+      background: var(--bg-light);
+      padding: 20px;
+      border-radius: 12px;
+      font-size: 0.95rem;
+      color: var(--text-gray);
+      margin-bottom: 40px;
+      border-left: 4px solid var(--primary);
+    }
+
+    .section-main {
+      margin-bottom: 40px;
+    }
+
+    .section-title-main {
+      font-size: 1.1rem;
+      font-weight: 700;
+      color: var(--primary);
+      text-transform: uppercase;
+      letter-spacing: 2px;
+      margin-bottom: 25px;
+      display: flex;
+      align-items: center;
+      gap: 15px;
+    }
+
+    .section-title-main::after {
+      content: '';
+      flex: 1;
+      height: 1px;
+      background: var(--border);
+    }
+
+    .project-item {
+      margin-bottom: 30px;
+    }
+
+    .project-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: baseline;
+      margin-bottom: 8px;
+    }
+
+    .project-name {
+      font-size: 1.1rem;
+      font-weight: 700;
+      color: var(--text-dark);
+    }
+
+    .project-date {
+      font-size: 0.8rem;
+      color: var(--text-gray);
+      font-weight: 500;
+    }
+
+    .project-tech {
+      font-size: 0.85rem;
+      color: var(--primary);
+      font-weight: 600;
+      margin-bottom: 8px;
+      display: block;
+    }
+
+    .project-desc {
+      font-size: 0.9rem;
+      color: var(--text-gray);
+      text-align: justify;
+    }
+
+    .edu-item {
+      margin-bottom: 20px;
+    }
+
+    .edu-degree {
+      font-size: 1rem;
+      font-weight: 700;
+      color: var(--text-dark);
+    }
+
+    .edu-school {
+      font-size: 0.9rem;
+      color: var(--primary);
+      font-weight: 500;
+    }
+
+    .edu-year {
+      font-size: 0.85rem;
+      color: var(--text-gray);
+    }
+
+    .print-btn {
+      position: fixed;
+      bottom: 30px;
+      right: 30px;
+      background: var(--primary);
+      color: white;
+      border: none;
+      padding: 15px 25px;
+      border-radius: 50px;
+      font-weight: 700;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+      transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+      z-index: 100;
+    }
+
+    .print-btn:hover {
+      transform: scale(1.05) translateY(-5px);
+      background: var(--secondary);
+    }
+
+    .soft-skills {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+    }
+
+    .soft-tag {
+      background: rgba(255, 255, 255, 0.1);
+      padding: 5px 12px;
+      border-radius: 20px;
+      font-size: 0.75rem;
+      font-weight: 500;
+    }
+  </style>
+</head>
+
+<body>
+
+  <button class="print-btn" onclick="window.print()">
+    <i class="fas fa-print"></i> Télécharger en PDF
+  </button>
+
+  <div class="cv-container">
+    <!-- SIDEBAR -->
+    <aside class="sidebar">
+      <div class="profile-img">
+        <img src="MB.png" alt="Matthew Bolia">
+      </div>
+
+      <div class="sidebar-section">
+        <span class="sidebar-title">Contact</span>
+        <a href="mailto:mathiasbolia82@gmail.com" class="contact-item">
+          <i class="fas fa-envelope"></i> mathiasbolia82@gmail.com
+        </a>
+        <a href="tel:+243825962850" class="contact-item">
+          <i class="fas fa-phone"></i> +243 825 962 850
+        </a>
+        <div class="contact-item">
+          <i class="fas fa-location-dot"></i> Kinshasa, RDC
+        </div>
+        <a href="https://www.linkedin.com/in/matthew-bolia-4139a5380" target="_blank" class="contact-item">
+          <i class="fab fa-linkedin"></i> linkedin.com/in/mbolia
+        </a>
+        <a href="https://github.com/Matthew-bolia" target="_blank" class="contact-item">
+          <i class="fab fa-github"></i> github.com/matthew-bolia
+        </a>
+      </div>
+
+      <div class="sidebar-section">
+        <span class="sidebar-title">Expertise Tech</span>
+        <div class="skill-list">
+          <div class="skill-item">
+            <span class="skill-name">Flutter & Dart</span>
+            <div class="skill-bar">
+              <div class="skill-progress" style="width: 90%;"></div>
+            </div>
+          </div>
+          <div class="skill-item">
+            <span class="skill-name">JavaScript (Node / React)</span>
+            <div class="skill-bar">
+              <div class="skill-progress" style="width: 85%;"></div>
+            </div>
+          </div>
+          <div class="skill-item">
+            <span class="skill-name">Firebase & MongoDB</span>
+            <div class="skill-bar">
+              <div class="skill-progress" style="width: 80%;"></div>
+            </div>
+          </div>
+          <div class="skill-item">
+            <span class="skill-name">HTML5 / CSS3 / PHP</span>
+            <div class="skill-bar">
+              <div class="skill-progress" style="width: 95%;"></div>
+            </div>
+          </div>
+          <div class="skill-item">
+            <span class="skill-name">UI/UX (Figma)</span>
+            <div class="skill-bar">
+              <div class="skill-progress" style="width: 75%;"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="sidebar-section">
+        <span class="sidebar-title">Langues</span>
+        <div class="lang-item"><span>Français</span> <span class="lang-level">Natif</span></div>
+        <div class="lang-item"><span>Lingala</span> <span class="lang-level">Natif</span></div>
+        <div class="lang-item"><span>Anglais</span> <span class="lang-level">Intermédiaire</span></div>
+      </div>
+
+      <div class="sidebar-section">
+        <span class="sidebar-title">Qualités</span>
+        <div class="soft-skills">
+          <span class="soft-tag">Travail d'équipe</span>
+          <span class="soft-tag">Souci du détail</span>
+          <span class="soft-tag">Adaptabilité</span>
+          <span class="soft-tag">Curiosité technique</span>
+        </div>
+      </div>
+    </aside>
+
+    <!-- MAIN CONTENT -->
+    <main class="main-content">
+      <header class="header-main">
+        <h1>Matthew <span>BOLIA</span></h1>
+        <div class="job-title">Développeur Web & Mobile Fullstack</div>
+      </header>
+
+      <div class="summary">
+        Développeur passionné par la création d'expériences digitales fluides et performantes. Spécialisé en
+        <strong>développement mobile (Flutter)</strong> et en écosystèmes web modernes. Mon approche combine rigueur
+        technique et une sensibilité particulière à l'expérience utilisateur pour transformer des idées en solutions
+        concrètes.
+      </div>
+
+      <div class="section-main">
+        <div class="section-title-main">Projets Majeurs</div>
+
+        <div class="project-item">
+          <div class="project-header">
+            <h3 class="project-name">Application de Fitness</h3>
+            <span class="project-date">2023 - 2024</span>
+          </div>
+          <span class="project-tech">Flutter • Firebase • Dart</span>
+          <p class="project-desc">
+            Conception d'une application de suivi sportif avec authentification, gestion de profils en temps réel et
+            interface intuitive. Optimisation des performances pour une expérience fluide sur iOS et Android.
+          </p>
+        </div>
+
+        <div class="project-item">
+          <div class="project-header">
+            <h3 class="project-name">Plateforme E-commerce</h3>
+            <span class="project-date">2023</span>
+          </div>
+          <span class="project-tech">React • Node.js • CSS3</span>
+          <p class="project-desc">
+            Développement d'un site de vente en ligne complet avec panier dynamique, filtrage de produits et design
+            responsive adapté à tous les supports.
+          </p>
+        </div>
+
+        <div class="project-item">
+          <div class="project-header">
+            <h3 class="project-name">Application Météo API</h3>
+            <span class="project-date">2023</span>
+          </div>
+          <span class="project-tech">JavaScript • External APIs • CSS</span>
+          <p class="project-desc">
+            Intégration d'APIs externes pour la récupération de données météorologiques en temps réel avec
+            géolocalisation et visualisation graphique simplifiée.
+          </p>
+        </div>
+      </div>
+
+      <div class="section-main">
+        <div class="section-title-main">Formation</div>
+        <div class="edu-item">
+          <div class="edu-degree">Études en Informatique</div>
+          <div class="edu-school">Institu Technique Kaya</div>
+          <div class="edu-University">Université Pédagogique Nationale (UPN) </div>
+          <div class="edu-year">Kinshasa, RDC</div>
+        </div>
+      </div>
+
+      <div class="section-main">
+        <div class="section-title-main">Centres d'intérêt</div>
+        <p class="project-desc">
+          Gaming (décompression et stratégie), Cinéma & Séries (analyse narrative), et veille technologique constante
+          pour rester à la pointe des nouveaux frameworks.
+        </p>
+      </div>
+
+    </main>
+  </div>
+
+</body>
+
+</html>

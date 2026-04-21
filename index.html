@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="theme-color" content="#1A237E">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Matthew Bolia — Développeur Web & Mobile</title>
+    <meta name="description" content="Découvrez le portfolio de Matthew Bolia, développeur Web et Mobile spécialisé en Flutter, React et Firebase. Basé à Kinshasa.">
+    <meta name="keywords" content="Matthew Bolia, développeur web, développeur mobile, Kinshasa, portfolio, Flutter, React, Firebase">
+    <meta property="og:title" content="Matthew Bolia — Portfolio">
+    <meta property="og:description" content="Développeur Web & Mobile créant des expériences digitales exceptionnelles.">
+    <meta property="og:url" content="https://matthewbolia.vercel.app/">
+    <link rel="icon" type="image/png" href="favicon.png">
+
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@800&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="style.css">
+
+
+    <link rel="prefetch" href="portfolio.html">
+    <link rel="prerender" href="portfolio.html">
+    <style>
+        body {
+            background-color: #1A237E;
+            margin: 0;
+            padding: 0;
+            overflow: hidden;
+            width: 100%;
+            height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+    </style>
+</head>
+
+<body class="no-scroll">
+    <!-- Custom Cursor -->
+    <div id="cursor-dot"></div>
+    <div id="cursor-outline"></div>
+
+    <div id="splash-screen">
+        <div class="splash-logo">
+            <span class="letter">M</span>
+            <span class="letter">B</span>
+        </div>
+    </div>
+
+    <script>
+
+        const cursorDot = document.getElementById('cursor-dot');
+        const cursorOutline = document.getElementById('cursor-outline');
+
+        window.addEventListener('mousemove', (e) => {
+            const posX = e.clientX;
+            const posY = e.clientY;
+
+            cursorDot.style.left = `${posX}px`;
+            cursorDot.style.top = `${posY}px`;
+            cursorDot.style.opacity = '1';
+
+            cursorOutline.animate({
+                left: `${posX}px`,
+                top: `${posY}px`
+            }, { duration: 500, fill: 'forwards' });
+            cursorOutline.style.opacity = '1';
+        });
+
+        document.addEventListener('DOMContentLoaded', () => {
+            setTimeout(() => {
+                window.location.replace('portfolio.html');
+            }, 3000);
+        });
+    </script>
+</body>
+
+</html>

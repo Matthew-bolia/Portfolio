@@ -1,0 +1,762 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Matthew Bolia — Développeur Web & Mobile</title>
+  <meta name="description"
+    content="Portfolio de Matthew Bolia, développeur Web et Mobile passionné basé à Kinshasa. Spécialisé en Flutter, React, JavaScript et Firebase.">
+  <meta name="keywords"
+    content="développeur web, développeur mobile, Flutter, React, JavaScript, Firebase, Kinshasa, RDC, Matthew Bolia, portfolio">
+  <meta name="author" content="Matthew Bolia">
+  <meta name="theme-color" content="#8B1A2B">
+  <link rel="canonical" href="https://matthewbolia.vercel.app/">
+
+  <!-- Open Graph -->
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Matthew Bolia — Développeur Web & Mobile">
+  <meta property="og:description"
+    content="Portfolio de Matthew Bolia, développeur Web et Mobile passionné. Spécialisé en Flutter, React, JavaScript et Firebase.">
+  <meta property="og:url" content="https://matthewbolia.vercel.app/">
+  <meta property="og:image" content="https://matthewbolia.vercel.app/MB.png">
+  <meta property="og:locale" content="fr_FR">
+  <meta property="og:site_name" content="Matthew Bolia Portfolio">
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Matthew Bolia — Développeur Web & Mobile">
+  <meta name="twitter:description" content="Développeur passionné créant des expériences digitales exceptionnelles.">
+  <meta name="twitter:image" content="https://matthewbolia.vercel.app/MB.png">
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/png" href="favicon.png">
+
+  <!-- Preconnect -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+  <!-- Fonts & Icons -->
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Playfair+Display:ital,wght@0,400;0,700;0,800;1,400;1,700&family=DM+Mono:wght@400;500&display=swap"
+    rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+  <!-- Styles -->
+  <link rel="stylesheet" href="style.css">
+
+  <!-- JSON-LD Structured Data -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Person",
+    "name": "Matthew Bolia",
+    "jobTitle": "Développeur Web & Mobile",
+    "url": "https://matthewbolia.vercel.app/",
+    "email": "mathiasbolia82@gmail.com",
+    "telephone": "+243825962850",
+    "image": "https://matthewbolia.vercel.app/MB.png",
+    "address": {
+      "@type": "PostalAddress",
+      "addressLocality": "Kinshasa",
+      "addressCountry": "CD"
+    },
+    "sameAs": [
+      "https://github.com/Matthew-bolia",
+      "https://www.linkedin.com/in/matthew-bolia-4139a5380",
+      "https://www.instagram.com/matthew_bolia",
+      "https://www.facebook.com/mat.thew.690976"
+    ]
+  }
+  </script>
+</head>
+
+<body>
+  <!-- Custom Cursor -->
+  <div id="cursor-dot"></div>
+  <div id="cursor-outline"></div>
+
+  <!-- ===== HEADER ===== -->
+  <header id="header" role="banner">
+    <div class="container">
+      <nav role="navigation" aria-label="Navigation principale">
+        <div class="nav-left">
+          <a href="#hero" class="nav-pill active" role="menuitem" data-i18n="nav_portfolio">Portfolio</a>
+          <a href="#about" class="nav-pill" role="menuitem" data-i18n="nav_about">À propos</a>
+          <a href="#projects" class="nav-pill" role="menuitem" data-i18n="nav_projects">Projets</a>
+          <a href="#contact" class="nav-pill" role="menuitem" data-i18n="nav_contact">Contact</a>
+        </div>
+
+        <div class="nav-right">
+          <a href="cv_matthieu_bolia_fullstack.html" download="Matthew_Bolia_CV.pdf" class="btn-cv"
+            aria-label="Télécharger le CV">
+            <i class="fas fa-file-alt"></i>
+            <span data-i18n="nav_cv">Voir CV</span>
+          </a>
+          <button id="theme-toggle" class="icon-btn" aria-label="Toggle Dark Mode">
+            <i class="fas fa-moon"></i>
+          </button>
+          <button id="lang-toggle" class="lang-btn" aria-label="Changer de langue">
+            <img src="https://flagcdn.com/w40/fr.png" alt="FR" class="lang-flag" />
+          </button>
+          <button class="hamburger" id="hamburger" aria-label="Ouvrir le menu" aria-expanded="false" type="button">
+            <span></span><span></span><span></span>
+          </button>
+        </div>
+      </nav>
+    </div>
+  </header>
+
+  <!-- SEARCH SPLASH WRAPPER -->
+  <div id="main-content-wrapper" class="portfolio-reveal">
+
+    <!-- Premium Scroll Progress Bar -->
+    <div id="scroll-progress"></div>
+
+    <!-- Accessibility: Skip to content -->
+    <a href="#main-content" class="skip-link">Aller au contenu principal</a>
+
+    <!-- Exact Hero Shape SVG Mask -->
+    <svg width="0" height="0" style="position:absolute;">
+      <defs>
+        <clipPath id="hero-shape" clipPathUnits="objectBoundingBox">
+          <path d="M 1,0 L 1,1 L 0.4,1 C 0.1,0.85 0.7,0.7 0.4,0.5 C 0.1,0.3 0.7,0.15 0.4,0 Z" />
+        </clipPath>
+      </defs>
+    </svg>
+
+    <!-- ===== MOBILE NAV ===== -->
+    <div class="mobile-nav" id="mobile-nav">
+      <a href="#hero" class="mobile-nav-link active" data-i18n="nav_portfolio">Portfolio</a>
+      <a href="#about" class="mobile-nav-link" data-i18n="nav_about">À propos</a>
+      <a href="#projects" class="mobile-nav-link" data-i18n="nav_projects">Projets</a>
+      <a href="#contact" class="mobile-nav-link" data-i18n="nav_contact">Contact</a>
+      <a href="cv_matthieu_bolia_fullstack.html" class="mobile-nav-link" data-i18n="nav_cv">Voir CV</a>
+    </div>
+
+    <!-- ===== MAIN ===== -->
+    <main id="main-content">
+
+      <!-- HERO -->
+      <section id="hero" aria-labelledby="hero-title">
+        <div class="container hero-content">
+          <div class="hero-text">
+            <span class="hero-label reveal-up" data-i18n="hero_label">Développeur Web & Mobile à Kinshasa</span>
+            <h1 id="hero-title" class="reveal-up">Matthew <span class="hero-name-bold">BOLIA.</span></h1>
+            <p class="hero-tagline reveal-up"><em data-i18n="hero_tagline">Ancien étudiant en informatique. Maintenant
+                je
+                code pour créer des solutions.</em></p>
+
+            <div class="hero-availability reveal-up">
+              <span class="avail-dot"></span>
+              <span data-i18n="hero_availability">Disponible pour de nouveaux projets</span>
+            </div>
+
+            <div class="hero-languages reveal-up">
+              <span class="languages-label" data-i18n="hero_lang_label">LANGUES PARLÉES</span>
+              <span class="languages-list" data-i18n="hero_languages">•Français • Anglais</span>
+            </div>
+
+            <div class="hero-socials reveal-up">
+              <a href="mailto:mathiasbolia82@gmail.com" class="social-pill social-email">
+                <i class="fas fa-envelope"></i> Email
+              </a>
+              <a href="https://www.linkedin.com/in/matthew-bolia-4139a5380" target="_blank" rel="noopener noreferrer"
+                class="social-pill social-linkedin">
+                <i class="fab fa-linkedin-in"></i> LinkedIn
+              </a>
+              <a href="https://github.com/Matthew-bolia" target="_blank" rel="noopener noreferrer"
+                class="social-pill social-github">
+                <i class="fab fa-github"></i> GitHub
+              </a>
+            </div>
+          </div>
+
+          <div class="hero-visual reveal-up">
+            <div class="story-container">
+              <div class="story-frame">
+                <div class="story-progress">
+                  <div class="progress-bar active"></div>
+                  <div class="progress-bar"></div>
+                  <div class="progress-bar"></div>
+                  <div class="progress-bar"></div>
+                </div>
+                <div class="story-content">
+                  <img src="img1.png" class="story-img active" alt="Matthew Bolia">
+                  <img src="img2.jpg" class="story-img">
+                  <img src="img3.jpg" class="story-img">
+                  <img src="img4.jpg" class="story-img">
+                </div>
+              </div>
+              <div class="story-thumbnails">
+                <div class="thumb active" data-index="0">
+                  <img src="img1.png" alt="Profile">
+                </div>
+                <div class="thumb" data-index="1">
+                  <img src="img2.jpg" alt="Work 1">
+                </div>
+                <div class="thumb" data-index="2">
+                  <img src="img3.jpg" alt="Work 2">
+                </div>
+                <div class="thumb" data-index="3">
+                  <img src="img4.jpg" alt="Work 3">
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- TECH TICKER -->
+      <section class="tech-ticker" aria-label="Technologies maîtrisées">
+        <div class="ticker-track">
+          <div class="ticker-content">
+            <span class="ticker-item"><img src="https://skillicons.dev/icons?i=flutter" alt="Flutter"
+                class="ticker-icon-img"> Flutter</span>
+            <span class="ticker-item"><img src="https://skillicons.dev/icons?i=dart" alt="Dart" class="ticker-icon-img">
+              Dart</span>
+            <span class="ticker-item"><img src="https://skillicons.dev/icons?i=js" alt="JavaScript"
+                class="ticker-icon-img"> JavaScript</span>
+            <span class="ticker-item"><img src="https://skillicons.dev/icons?i=html" alt="HTML" class="ticker-icon-img">
+              HTML</span>
+            <span class="ticker-item"><img src="https://skillicons.dev/icons?i=css" alt="CSS" class="ticker-icon-img">
+              CSS</span>
+            <span class="ticker-item"><img src="https://skillicons.dev/icons?i=php" alt="PHP" class="ticker-icon-img">
+              PHP</span>
+            <span class="ticker-item"><img src="https://skillicons.dev/icons?i=firebase" alt="Firebase"
+                class="ticker-icon-img"> Firebase</span>
+            <span class="ticker-item"><img src="https://skillicons.dev/icons?i=nodejs" alt="Node.js"
+                class="ticker-icon-img"> Node.js</span>
+            <span class="ticker-item"><img src="https://skillicons.dev/icons?i=cloudinary" alt="Cloudinary"
+                class="ticker-icon-img"> Cloudinary</span>
+            <span class="ticker-item"><img src="https://skillicons.dev/icons?i=gcp" alt="Google Console"
+                class="ticker-icon-img"> Google Console</span>
+            <span class="ticker-item"><img src="https://skillicons.dev/icons?i=aws" alt="AWS" class="ticker-icon-img">
+              AWS</span>
+            <span class="ticker-item"><img src="https://skillicons.dev/icons?i=mongodb" alt="MongoDB"
+                class="ticker-icon-img"> MongoDB</span>
+            <span class="ticker-item"><img src="https://skillicons.dev/icons?i=github" alt="GitHub"
+                class="ticker-icon-img"> GitHub</span>
+            <span class="ticker-item"><img src="https://skillicons.dev/icons?i=git" alt="Git" class="ticker-icon-img">
+              Git</span>
+            <span class="ticker-item"><img
+                src="https://cdn.jsdelivr.net/npm/@lobehub/icons-static-svg@latest/icons/gemini.svg" alt="Gemini"
+                class="ticker-icon-img"> Gemini</span>
+            <span class="ticker-item"><img
+                src="https://cdn.jsdelivr.net/npm/@lobehub/icons-static-svg@latest/icons/claude.svg" alt="Claude"
+                class="ticker-icon-img"> Claude</span>
+            <span class="ticker-item"><img
+                src="https://cdn.jsdelivr.net/npm/@lobehub/icons-static-svg@latest/icons/openai.svg" alt="OpenAI"
+                class="ticker-icon-img"> OpenAI</span>
+            <span class="ticker-item"><img
+                src="https://cdn.jsdelivr.net/npm/@lobehub/icons-static-svg@latest/icons/perplexity.svg"
+                alt="Perplexity" class="ticker-icon-img"> Perplexity</span>
+            <span class="ticker-item"><img
+                src="https://cdn.jsdelivr.net/npm/@lobehub/icons-static-svg@latest/icons/grok.svg" alt="Grok"
+                class="ticker-icon-img"> Grok</span>
+            <span class="ticker-item"><img
+                src="https://cdn.jsdelivr.net/npm/@lobehub/icons-static-svg@latest/icons/deepseek.svg" alt="DeepSeek"
+                class="ticker-icon-img"> DeepSeek</span>
+            <span class="ticker-item"><i class="fas fa-rocket" style="color:#1A237E"></i> Antigravity</span>
+          </div>
+          <div class="ticker-content" aria-hidden="true">
+            <span class="ticker-item"><img src="https://skillicons.dev/icons?i=flutter" alt="Flutter"
+                class="ticker-icon-img"> Flutter</span>
+            <span class="ticker-item"><img src="https://skillicons.dev/icons?i=dart" alt="Dart" class="ticker-icon-img">
+              Dart</span>
+            <span class="ticker-item"><img src="https://skillicons.dev/icons?i=js" alt="JavaScript"
+                class="ticker-icon-img"> JavaScript</span>
+            <span class="ticker-item"><img src="https://skillicons.dev/icons?i=html" alt="HTML" class="ticker-icon-img">
+              HTML</span>
+            <span class="ticker-item"><img src="https://skillicons.dev/icons?i=css" alt="CSS" class="ticker-icon-img">
+              CSS</span>
+            <span class="ticker-item"><img src="https://skillicons.dev/icons?i=php" alt="PHP" class="ticker-icon-img">
+              PHP</span>
+            <span class="ticker-item"><img src="https://skillicons.dev/icons?i=firebase" alt="Firebase"
+                class="ticker-icon-img"> Firebase</span>
+            <span class="ticker-item"><img src="https://skillicons.dev/icons?i=nodejs" alt="Node.js"
+                class="ticker-icon-img"> Node.js</span>
+            <span class="ticker-item"><img src="https://skillicons.dev/icons?i=cloudinary" alt="Cloudinary"
+                class="ticker-icon-img"> Cloudinary</span>
+            <span class="ticker-item"><img src="https://skillicons.dev/icons?i=gcp" alt="Google Console"
+                class="ticker-icon-img"> Google Console</span>
+            <span class="ticker-item"><img src="https://skillicons.dev/icons?i=aws" alt="AWS" class="ticker-icon-img">
+              AWS</span>
+            <span class="ticker-item"><img src="https://skillicons.dev/icons?i=mongodb" alt="MongoDB"
+                class="ticker-icon-img"> MongoDB</span>
+            <span class="ticker-item"><img src="https://skillicons.dev/icons?i=github" alt="GitHub"
+                class="ticker-icon-img"> GitHub</span>
+            <span class="ticker-item"><img src="https://skillicons.dev/icons?i=git" alt="Git" class="ticker-icon-img">
+              Git</span>
+            <span class="ticker-item"><img
+                src="https://cdn.jsdelivr.net/npm/@lobehub/icons-static-svg@latest/icons/gemini.svg" alt="Gemini"
+                class="ticker-icon-img"> Gemini</span>
+            <span class="ticker-item"><img
+                src="https://cdn.jsdelivr.net/npm/@lobehub/icons-static-svg@latest/icons/claude.svg" alt="Claude"
+                class="ticker-icon-img"> Claude</span>
+            <span class="ticker-item"><img
+                src="https://cdn.jsdelivr.net/npm/@lobehub/icons-static-svg@latest/icons/openai.svg" alt="OpenAI"
+                class="ticker-icon-img"> OpenAI</span>
+            <span class="ticker-item"><img
+                src="https://cdn.jsdelivr.net/npm/@lobehub/icons-static-svg@latest/icons/perplexity.svg"
+                alt="Perplexity" class="ticker-icon-img"> Perplexity</span>
+            <span class="ticker-item"><img
+                src="https://cdn.jsdelivr.net/npm/@lobehub/icons-static-svg@latest/icons/grok.svg" alt="Grok"
+                class="ticker-icon-img"> Grok</span>
+            <span class="ticker-item"><img
+                src="https://cdn.jsdelivr.net/npm/@lobehub/icons-static-svg@latest/icons/deepseek.svg" alt="DeepSeek"
+                class="ticker-icon-img"> DeepSeek</span>
+            <span class="ticker-item"><i class="fas fa-rocket" style="color:#1A237E"></i> Antigravity</span>
+          </div>
+        </div>
+      </section>
+
+      <!-- ABOUT SECTION -->
+      <section id="about" class="about-section section-padding" aria-labelledby="about-title">
+        <div class="container">
+          <!-- Top part -->
+          <div class="about-top">
+            <!-- Left: Photo -->
+            <div class="about-photo-wrapper reveal-up">
+              <div class="about-photo">
+                <img src="MB.png" alt="Photo de Matthew Bolia" loading="lazy">
+                <div class="wave-badge">👋</div>
+              </div>
+            </div>
+            <!-- Right: Text -->
+            <div class="about-text-wrapper reveal-up">
+              <span class="section-label" data-i18n="about_label">À PROPOS</span>
+              <h2 id="about-title" class="section-title" data-i18n="about_title">Qui suis-je ?</h2>
+              <p class="about-description" data-i18n="about_desc">
+                Développeur passionné par la création d'applications web et mobiles modernes.
+                Formé et constamment en apprentissage, je maîtrise aussi bien la conception frontend que l'intégration
+                backend.
+                Ancien étudiant en informatique, j'applique aujourd'hui avec rigueur mon souci du détail au
+                développement
+                digital.
+              </p>
+              <div class="about-email-row">
+                <a href="mathiasbolia82@gmail.com" class="email-link">
+                  <img src="https://upload.wikimedia.org/wikipedia/commons/7/7e/Gmail_icon_%282020%29.svg" alt="Gmail"
+                    width="16"> mathiasbolia82@gmail.com
+                </a>
+                <button class="copy-btn copy-btn-small copy-btn-multi" data-email="mathiasbolia82@gmail.com"
+                  aria-label="Copier l'email">
+                  <i class="far fa-copy"></i> <span data-i18n="copy_btn">Copier</span>
+                </button>
+              </div>
+            </div>
+          </div>
+
+          <!-- Bottom part: SKILLS -->
+          <div class="about-skills reveal-up">
+            <span class="section-label" data-i18n="skills_label">COMPÉTENCES</span>
+            <div class="skills-header">
+              <h2 class="section-title">Ce que j'apporte <span id="random-skill" class="random-skill-accent"></span>
+              </h2>
+
+            </div>
+
+            <div class="skills-columns">
+              <!-- Hard Skills -->
+              <div class="skills-col">
+                <h3 class="skills-col-title"><span class="dot red"></span> <span
+                    data-i18n="skills_technical">Compétences
+                    techniques</span></h3>
+                <div class="skills-pill-group">
+                  <span class="skill-pill"><img src="https://skillicons.dev/icons?i=flutter" alt="Flutter"
+                      class="skill-icon-img"> Flutter</span>
+                  <span class="skill-pill"><img src="https://skillicons.dev/icons?i=dart" alt="Dart"
+                      class="skill-icon-img"> Dart</span>
+                  <span class="skill-pill"><img src="https://skillicons.dev/icons?i=js" alt="JavaScript"
+                      class="skill-icon-img"> JavaScript</span>
+                  <span class="skill-pill"><img src="https://skillicons.dev/icons?i=html" alt="HTML"
+                      class="skill-icon-img"> HTML</span>
+                  <span class="skill-pill"><img src="https://skillicons.dev/icons?i=css" alt="CSS"
+                      class="skill-icon-img">
+                    CSS</span>
+                  <span class="skill-pill"><img src="https://skillicons.dev/icons?i=php" alt="PHP"
+                      class="skill-icon-img">
+                    PHP</span>
+                  <span class="skill-pill"><img src="https://skillicons.dev/icons?i=firebase" alt="Firebase"
+                      class="skill-icon-img"> Firebase</span>
+                  <span class="skill-pill"><img src="https://skillicons.dev/icons?i=nodejs" alt="Node.js"
+                      class="skill-icon-img"> Node.js</span>
+                  <span class="skill-pill"><img src="https://skillicons.dev/icons?i=cloudinary" alt="Cloudinary"
+                      class="skill-icon-img"> Cloudinary</span>
+                  <span class="skill-pill"><img src="https://skillicons.dev/icons?i=gcp" alt="Google Console"
+                      class="skill-icon-img"> Google Console</span>
+                  <span class="skill-pill"><img src="https://skillicons.dev/icons?i=aws" alt="AWS"
+                      class="skill-icon-img">
+                    AWS</span>
+                  <span class="skill-pill"><img src="https://skillicons.dev/icons?i=mongodb" alt="MongoDB"
+                      class="skill-icon-img"> MongoDB</span>
+                  <span class="skill-pill"><img src="https://skillicons.dev/icons?i=github" alt="GitHub"
+                      class="skill-icon-img"> GitHub</span>
+                  <span class="skill-pill"><img src="https://skillicons.dev/icons?i=git" alt="Git"
+                      class="skill-icon-img">
+                    Git</span>
+                  <span class="skill-pill"><img src="https://skillicons.dev/icons?i=figma" alt="Figma"
+                      class="skill-icon-img"> Figma</span>
+                  <span class="skill-pill"><i class="fas fa-rocket" style="color:#1A237E"></i> Antigravity</span>
+                </div>
+              </div>
+              <!-- AI Skills -->
+              <div class="skills-col">
+                <h3 class="skills-col-title"><span class="dot red"></span> <span data-i18n="skills_ai">Intelligence
+                    Artificielle</span></h3>
+                <div class="skills-pill-group">
+                  <span class="skill-pill"><img
+                      src="https://cdn.jsdelivr.net/npm/@lobehub/icons-static-svg@latest/icons/gemini.svg" alt="Gemini"
+                      class="skill-icon-img"> Gemini</span>
+                  <span class="skill-pill"><img
+                      src="https://cdn.jsdelivr.net/npm/@lobehub/icons-static-svg@latest/icons/claude.svg" alt="Claude"
+                      class="skill-icon-img"> Claude AI</span>
+                  <span class="skill-pill"><img
+                      src="https://cdn.jsdelivr.net/npm/@lobehub/icons-static-svg@latest/icons/openai.svg" alt="OpenAI"
+                      class="skill-icon-img"> OpenAI</span>
+                  <span class="skill-pill"><img
+                      src="https://cdn.jsdelivr.net/npm/@lobehub/icons-static-svg@latest/icons/perplexity.svg"
+                      alt="Perplexity" class="skill-icon-img"> Perplexity</span>
+                  <span class="skill-pill"><img
+                      src="https://cdn.jsdelivr.net/npm/@lobehub/icons-static-svg@latest/icons/grok.svg" alt="Grok"
+                      class="skill-icon-img"> Grok</span>
+                  <span class="skill-pill"><img
+                      src="https://cdn.jsdelivr.net/npm/@lobehub/icons-static-svg@latest/icons/deepseek.svg"
+                      alt="DeepSeek" class="skill-icon-img"> DeepSeek</span>
+                </div>
+              </div>
+
+              <!-- Soft Skills -->
+              <div class="skills-col">
+                <h3 class="skills-col-title"><span class="dot red"></span> <span
+                    data-i18n="skills_soft">Savoir-être</span></h3>
+                <div class="skills-pill-group soft-skills">
+                  <span class="skill-pill soft" data-i18n="skill_teamwork">Travail d'équipe</span>
+                  <span class="skill-pill soft" data-i18n="skill_detail">Souci du détail</span>
+                  <span class="skill-pill soft" data-i18n="skill_adapt">Adaptabilité</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- PARCOURS / TIMELINE (Premium) -->
+          <div class="about-education reveal-up">
+            <span class="section-label" data-i18n="education_label">PARCOURS ACADÉMIQUE</span>
+            <div class="timeline">
+              <div class="timeline-item">
+                <div class="timeline-dot"></div>
+                <div class="timeline-content">
+                  <h3 class="timeline-title" data-i18n="edu_upn_title">Université Pédagogique Nationale (UPN)</h3>
+                  <span class="timeline-location">Kinshasa, RDC</span>
+                  <p class="timeline-desc" data-i18n="edu_upn_desc">Études supérieures en Informatique.
+                    Approfondissement des concepts algorithmiques et du développement logiciel.</p>
+                </div>
+              </div>
+              <div class="timeline-item">
+                <div class="timeline-dot"></div>
+                <div class="timeline-content">
+                  <h3 class="timeline-title" data-i18n="edu_kaya_title">Institu Technique Kaya</h3>
+                  <span class="timeline-location">Kinshasa, RDC</span>
+                  <p class="timeline-desc" data-i18n="edu_kaya_desc">Formation technique initiale en informatique et
+                    nouvelles technologies.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </section>
+
+      <!-- PROJECTS -->
+      <section id="projects" aria-labelledby="projects-title">
+        <div class="container">
+          <div class="section-header reveal-up">
+            <span class="section-label" data-i18n="projects_label">PROJETS</span>
+            <h2 id="projects-title" class="section-title"><span data-i18n="projects_title">Ce que j'ai
+                construit</span>
+
+            </h2>
+            <p class="section-subtitle" data-i18n="projects_subtitle">Quelques projets sur lesquels j'ai travaillé
+              récemment</p>
+          </div>
+
+          <div class="projects-grid">
+            <article class="project-card reveal-up">
+              <div class="project-image">
+                <img src="image1.png" alt="Application de Fitness — suivi sportif mobile" loading="lazy">
+              </div>
+              <div class="project-info">
+                <div class="project-header">
+                  <h3>Application de Fitness</h3>
+                  <div class="project-actions">
+                    <a href="https://github.com/Matthew-bolia" target="_blank" rel="noopener noreferrer"
+                      class="project-icon-link" aria-label="Code source"><i class="fab fa-github"></i></a>
+                    <a href="#" class="btn-view-project" target="_blank" rel="noopener noreferrer">
+                      <i class="fas fa-external-link-alt"></i> <span data-i18n="btn_view_project">Voir projet</span>
+                    </a>
+                  </div>
+                </div>
+                <p data-i18n="project1_desc">Application mobile de suivi sportif développée avec Flutter et Firebase.
+                  Interface intuitive et performante.</p>
+                <div class="project-tags">
+                  <span><i class="fas fa-mobile-screen-button" style="color:#027DFD"></i> Flutter</span>
+                  <span><i class="fas fa-fire" style="color:#FFCA28"></i> Firebase</span>
+                  <span><i class="fas fa-code" style="color:#00B4AB"></i> Dart</span>
+                </div>
+              </div>
+            </article>
+
+            <article class="project-card reveal-up">
+              <div class="project-image">
+                <img src="my.PNG" alt="Portfolio Personnel — site vitrine professionnel" loading="lazy">
+              </div>
+              <div class="project-info">
+                <div class="project-header">
+                  <h3 data-i18n="project2_title">Portfolio Personnel</h3>
+                  <div class="project-actions">
+                    <a href="https://github.com/Matthew-bolia/Portfolio" target="_blank" rel="noopener noreferrer"
+                      class="project-icon-link" aria-label="Code source"><i class="fab fa-github"></i></a>
+                    <a href="https://matthew-bolia.github.io/Portfolio/" class="btn-view-project" target="_blank" rel="noopener noreferrer">
+                      <i class="fas fa-external-link-alt"></i> <span data-i18n="btn_view_project">Voir projet</span>
+                    </a>
+                  </div>
+                </div>
+                <p data-i18n="project2_desc">Portfolio professionnel avec animations premium, mode sombre, multilingue et design responsive moderne.</p>
+                <div class="project-tags">
+                  <span><i class="fab fa-html5" style="color:#E34F26"></i> HTML</span>
+                  <span><i class="fab fa-js" style="color:#F7DF1E"></i> JavaScript</span>
+                  <span><i class="fab fa-css3-alt" style="color:#264DE4"></i> CSS</span>
+                </div>
+              </div>
+            </article>
+
+            <article class="project-card reveal-up">
+              <div class="project-image">
+                <img src="projet1.jpg" alt="Application Météo — prévisions en temps réel" loading="lazy">
+              </div>
+              <div class="project-info">
+                <div class="project-header">
+                  <h3>Application Météo</h3>
+                  <div class="project-actions">
+                    <a href="https://github.com/Matthew-bolia" target="_blank" rel="noopener noreferrer"
+                      class="project-icon-link" aria-label="Code source"><i class="fab fa-github"></i></a>
+                    <a href="#" class="btn-view-project" target="_blank" rel="noopener noreferrer">
+                      <i class="fas fa-external-link-alt"></i> <span data-i18n="btn_view_project">Voir projet</span>
+                    </a>
+                  </div>
+                </div>
+                <p data-i18n="project3_desc">Application météo avec géolocalisation et prévisions en temps réel via
+                  API
+                  externe.</p>
+                <div class="project-tags">
+                  <span><i class="fab fa-js" style="color:#F7DF1E"></i> JavaScript</span>
+                  <span>API</span>
+                  <span><i class="fab fa-css3-alt" style="color:#264DE4"></i> CSS</span>
+                </div>
+              </div>
+            </article>
+
+            <!-- CTA Card -->
+            <article class="project-card cta-card reveal-up">
+              <div class="cta-content">
+                <div class="cta-icon">
+                  <i class="fas fa-plus"></i>
+                </div>
+                <h3 data-i18n="cta_card_title">Votre Projet ?</h3>
+                <p data-i18n="cta_card_desc">Construisons quelque chose d'incroyable ensemble</p>
+                <a href="#contact" class="btn-cta" data-i18n="cta_card_btn">Me contacter</a>
+              </div>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <!-- CONTACT -->
+      <section id="contact" aria-labelledby="contact-title">
+        <div class="container">
+          <div class="contact-layout">
+            <div class="contact-left reveal-up">
+              <span class="section-label" data-i18n="contact_label">Me contacter</span>
+              <h2 id="contact-title" class="section-title"><span data-i18n="contact_title">Discutons ?</span> <span
+                  class="loading-dots"><span>.</span><span>.</span><span>.</span></span></h2>
+              <p class="contact-description" data-i18n="contact_desc">
+                Je suis disponible pour de nouveaux projets et collaborations.
+                Si vous cherchez un développeur motivé avec des compétences solides
+                et un engagement envers l'apprentissage continu, je serais ravi de
+                discuter de votre projet.
+              </p>
+
+              <div class="email-copy-row">
+                <a href="mailto:mathiasbolia82@gmail.com" class="email-link">
+                  <i class="fas fa-envelope"></i> mathiasbolia82@gmail.com
+                </a>
+                <button class="copy-btn" id="copy-email" data-email="mathiasbolia82@gmail.com"
+                  aria-label="Copier l'email">
+                  <i class="far fa-copy"></i> <span data-i18n="copy_btn">Copier</span>
+                </button>
+              </div>
+
+              <div class="contact-extra-links">
+                <a href="tel:+243825962850" class="extra-link">
+                  <i class="fas fa-phone"></i> +243 825 962 850
+                </a>
+                <a href="https://wa.me/243825962850" target="_blank" rel="noopener noreferrer" class="extra-link">
+                  <i class="fab fa-whatsapp"></i> WhatsApp
+                </a>
+              </div>
+            </div>
+
+            <div class="contact-right reveal-up">
+              <div class="quick-facts-card">
+                <h3 class="facts-title" data-i18n="facts_title">Quick facts</h3>
+                <div class="facts-grid">
+                  <div class="fact-row">
+                    <span class="fact-label" data-i18n="fact_loc_lbl">Localisation</span>
+                    <span class="fact-value" data-i18n="fact_loc_val">Kinshasa, RDC</span>
+                  </div>
+                  <div class="fact-row">
+                    <span class="fact-label" data-i18n="fact_status_lbl">Statut</span>
+                    <span class="fact-value" data-i18n="fact_status_val">Étudiant / Freelance</span>
+                  </div>
+                  <div class="fact-row">
+                    <span class="fact-label" data-i18n="fact_search_lbl">Recherche</span>
+                    <span class="fact-value" data-i18n="fact_search_val">Projets & Collaborations</span>
+                  </div>
+                  <div class="fact-row">
+                    <span class="fact-label" data-i18n="fact_lang_lbl">Langues</span>
+                    <span class="fact-value" data-i18n="fact_lang_val">Français, Lingala, Anglais</span>
+                  </div>
+                </div>
+                <div class="facts-buttons">
+                  <a href="https://www.linkedin.com/in/matthew-bolia-4139a5380" target="_blank"
+                    rel="noopener noreferrer" class="fact-btn">
+                    <i class="fab fa-linkedin-in"></i> LinkedIn
+                  </a>
+                  <a href="https://github.com/Matthew-bolia" target="_blank" rel="noopener noreferrer" class="fact-btn">
+                    <i class="fab fa-github"></i> GitHub
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- HOBBIES — QUAND JE NE CODE PAS (after contact) -->
+      <section id="hobbies" aria-labelledby="hobbies-title">
+        <div class="container">
+          <div class="section-header section-header-center reveal-up">
+            <span class="section-label" data-i18n="hobbies_label">QUAND JE NE CODE PAS</span>
+            <h2 id="hobbies-title" class="section-title section-title-center">
+              <span class="terminal-title" data-i18n="hobbies_title">$ La vie en dehors du terminal</span>
+            </h2>
+          </div>
+
+          <div class="stacked-slider-wrapper reveal-up">
+            <div class="stacked-slider" id="stacked-slider">
+              <div class="stacked-card" data-index="0">
+                <img src="hobby_movies.png" alt="Films & Séries" loading="lazy">
+                <div class="stacked-card-overlay">
+                  <h3><span class="animated-underline" data-i18n="hobby1_title">Films & Séries</span></h3>
+                  <p data-i18n="hobby1_desc">J'adore regarder des séries et films pour me détendre.</p>
+                  <div class="swipe-hint" data-i18n="swipe_hint">← Balayer ou appuyer →</div>
+                </div>
+              </div>
+              <div class="stacked-card" data-index="1">
+                <img src="hobby_gaming.png" alt="Jeux vidéo" loading="lazy">
+                <div class="stacked-card-overlay">
+                  <h3><span class="animated-underline" data-i18n="hobby2_title">Jeux Vidéo</span></h3>
+                  <p data-i18n="hobby2_desc">Le gaming est ma façon de décompresser après le code.</p>
+                  <div class="swipe-hint" data-i18n="swipe_hint">← Balayer ou appuyer →</div>
+                </div>
+              </div>
+              <div class="stacked-card" data-index="2">
+                <img src="hobby_music.png" alt="Musique" loading="lazy">
+                <div class="stacked-card-overlay">
+                  <h3><span class="animated-underline" data-i18n="hobby3_title">Musique</span></h3>
+                  <p data-i18n="hobby3_desc">J'écoute de la musique en codant et dans la vie.</p>
+                  <div class="swipe-hint" data-i18n="swipe_hint">← Balayer ou appuyer →</div>
+                </div>
+              </div>
+              <div class="stacked-card" data-index="3">
+                <img src="hobby1.png" alt="Méditation" loading="lazy">
+                <div class="stacked-card-overlay">
+                  <h3><span class="animated-underline" data-i18n="hobby4_title">Méditation & Prière</span></h3>
+                  <p data-i18n="hobby4_desc">Toujours en train de méditer la parole de Dieu.</p>
+                  <div class="swipe-hint" data-i18n="swipe_hint">← Balayer ou appuyer →</div>
+                </div>
+              </div>
+            </div>
+            <div class="stacked-indicators" id="stacked-indicators">
+              <span class="indicator-dot active" data-index="0"></span>
+              <span class="indicator-dot" data-index="1"></span>
+              <span class="indicator-dot" data-index="2"></span>
+              <span class="indicator-dot" data-index="3"></span>
+            </div>
+          </div>
+        </div>
+      </section>
+
+    </main>
+
+    <!-- ===== FOOTER ===== -->
+    <footer role="contentinfo">
+      <div class="container">
+        <div class="footer-grid">
+          <div class="footer-brand">
+            <div class="footer-avatar">
+              <img src="MB.png" alt="Matthew Bolia" width="40" height="40">
+            </div>
+            <div class="footer-brand-text">
+              <strong>Matthew Bolia</strong>
+              <p data-i18n="footer_brand_desc">Développeur Web & Mobile créant des expériences digitales depuis
+                Kinshasa.
+              </p>
+            </div>
+          </div>
+          <div class="footer-col">
+            <h4 data-i18n="footer_sections">SECTIONS</h4>
+            <ul>
+              <li><a href="#hero" data-i18n="nav_home">Accueil</a></li>
+              <li><a href="#about" data-i18n="nav_about">À propos</a></li>
+              <li><a href="#projects" data-i18n="nav_projects">Projets</a></li>
+              <li><a href="#contact" data-i18n="nav_contact">Contact</a></li>
+            </ul>
+          </div>
+          <div class="footer-col">
+            <h4 data-i18n="footer_links">LIENS</h4>
+            <ul>
+              <li><a href="cv_matthieu_bolia_fullstack.html" data-i18n="footer_cv">CV</a></li>
+            </ul>
+          </div>
+          <div class="footer-col">
+            <h4 data-i18n="footer_socials">RÉSEAUX</h4>
+            <ul>
+              <li><a href="https://www.linkedin.com/in/matthew-bolia-4139a5380" target="_blank"
+                  rel="noopener noreferrer">LinkedIn</a></li>
+              <li><a href="https://github.com/Matthew-bolia" target="_blank" rel="noopener noreferrer">GitHub</a></li>
+              <li><a href="mailto:mathiasbolia82@gmail.com">Email</a></li>
+              <li><a href="https://wa.me/243825962850" target="_blank" rel="noopener noreferrer">WhatsApp</a></li>
+            </ul>
+          </div>
+        </div>
+        <div class="footer-bottom">
+          <p>&copy; <span id="current-year">2026</span> Matthew Bolia. <span data-i18n="footer_rights">Tous droits
+              réservés.</span></p>
+        </div>
+      </div>
+    </footer>
+
+    <!-- Back to Top -->
+    <button id="back-to-top" class="back-to-top" aria-label="Retour en haut" type="button">
+      <i class="fas fa-chevron-up"></i>
+    </button>
+
+  </div> <!-- End #main-content-wrapper -->
+
+  <!-- Scripts -->
+  <script src="script.js" defer></script>
+</body>
+
+</html>
