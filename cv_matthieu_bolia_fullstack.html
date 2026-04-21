@@ -316,6 +316,79 @@
       font-size: 0.75rem;
       font-weight: 500;
     }
+
+    /* RESPONSIVE DESIGN - MOBILE FIX */
+    @media (max-width: 768px) {
+      .cv-container {
+        grid-template-columns: 1fr;
+        margin: 0;
+        width: 100vw;
+        max-width: none;
+        box-shadow: none;
+      }
+
+      .sidebar {
+        padding: 30px 20px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+      }
+
+      .profile-img {
+        width: 120px;
+        height: 120px;
+        margin-bottom: 20px;
+      }
+
+      .contact-item {
+        justify-content: center;
+      }
+
+      .main-content {
+        padding: 30px 20px;
+      }
+
+      .header-main h1 {
+        font-size: 2rem;
+        text-align: center;
+      }
+
+      .job-title {
+        text-align: center;
+        font-size: 1rem;
+      }
+
+      .summary {
+        text-align: justify;
+        font-size: 0.9rem;
+      }
+
+      .section-title-main {
+        font-size: 1rem;
+      }
+
+      .project-header {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 2px;
+      }
+
+      .project-name {
+        font-size: 1rem;
+      }
+
+      .soft-skills {
+        justify-content: center;
+      }
+      
+      .print-btn {
+        padding: 12px 20px;
+        font-size: 0.9rem;
+        bottom: 20px;
+        right: 20px;
+      }
+    }
   </style>
 </head>
 
