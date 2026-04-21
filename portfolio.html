@@ -32,6 +32,9 @@
   <!-- Favicon -->
   <link rel="icon" type="image/png" href="favicon.png">
 
+  <!-- Performance: Preload Critical Hero Image -->
+  <link rel="preload" href="img1.png" as="image">
+
   <!-- Preconnect -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -182,24 +185,24 @@
                   <div class="progress-bar"></div>
                 </div>
                 <div class="story-content">
-                  <img src="img1.png" class="story-img active" alt="Matthew Bolia">
-                  <img src="img2.jpg" class="story-img">
-                  <img src="img3.jpg" class="story-img">
-                  <img src="img4.jpg" class="story-img">
+                  <img src="img1.png" class="story-img active" alt="Matthew Bolia" fetchpriority="high" loading="eager">
+                  <img src="img2.jpg" class="story-img" loading="lazy">
+                  <img src="img3.jpg" class="story-img" loading="lazy">
+                  <img src="img4.jpg" class="story-img" loading="lazy">
                 </div>
               </div>
               <div class="story-thumbnails">
                 <div class="thumb active" data-index="0">
-                  <img src="img1.png" alt="Profile">
+                  <img src="img1.png" alt="Profile" loading="lazy">
                 </div>
                 <div class="thumb" data-index="1">
-                  <img src="img2.jpg" alt="Work 1">
+                  <img src="img2.jpg" alt="Work 1" loading="lazy">
                 </div>
                 <div class="thumb" data-index="2">
-                  <img src="img3.jpg" alt="Work 2">
+                  <img src="img3.jpg" alt="Work 2" loading="lazy">
                 </div>
                 <div class="thumb" data-index="3">
-                  <img src="img4.jpg" alt="Work 3">
+                  <img src="img4.jpg" alt="Work 3" loading="lazy">
                 </div>
               </div>
             </div>
@@ -509,7 +512,7 @@
 
             <article class="project-card reveal-up">
               <div class="project-image">
-                <img src="my.PNG" alt="Portfolio Personnel — site vitrine professionnel" loading="lazy">
+                <img src="my.png" alt="Portfolio Personnel — site vitrine professionnel" loading="lazy">
               </div>
               <div class="project-info">
                 <div class="project-header">
