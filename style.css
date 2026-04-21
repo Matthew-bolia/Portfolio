@@ -5,17 +5,17 @@
    --primary-dark: #121858;
    --primary-soft: rgba(26, 35, 126, 0.08);
 
-   --bg-main: #FBF5F0;
+   --bg-main: #FFFFFF;
    --bg-card: #FFFFFF;
-   --bg-section-alt: #F5EDE6;
-   --bg-ticker: #FBF5F0;
+   --bg-section-alt: #F9FAFB;
+   --bg-ticker: #FFFFFF;
    --cta-bg: #e8eafc;
 
    --text-primary: #1a1a2e;
    --text-secondary: #6b7280;
    --text-muted: #9ca3af;
 
-   --border: #e5e0db;
+   --border: #E5E7EB;
    --border-hover: rgba(26, 35, 126, 0.3);
    --shadow: 0 4px 24px rgba(0, 0, 0, 0.06);
    --shadow-hover: 0 12px 40px rgba(0, 0, 0, 0.1);
